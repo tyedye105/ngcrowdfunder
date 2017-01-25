@@ -1,4 +1,4 @@
-<div *ngFor="let project of projects">
+<div class="well" *ngFor="let project of projects" (click)="goToProjectDetailPage(project)">
     <h3><em>{{project.title}}</em> by {{project.creator}}</h3><br>
     <h5>{{project.description}}</h5><br>
     <h4>Amount Raised: {{project.raised}} Goal: {{project.goal}}</h4>
