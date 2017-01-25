@@ -10,10 +10,14 @@ import { PROJECTS } from '../mock-projects';
   styleUrls: ['./project-detail.component.css']
 })
 export class ProjectDetailComponent implements OnInit {
+  projectId: number = null;
 
-  constructor() { }
+  constructor(private route: ActivatedRoute, private location: Location) { }
 
   ngOnInit() {
+    this.route.params.forEach((urlParameters) => {
+      this.projectId = parseInt(urlParameters['id']);
+    });
   }
 
 }
