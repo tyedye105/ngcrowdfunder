@@ -1,22 +1,28 @@
 import { Component, OnInit } from '@angular/core';
 import { Project } from '../project.model';
 import { Router } from '@angular/router';
+import { ProjectService } from '../project.service';
 
 @Component({
   selector: 'welcome',
   templateUrl: './welcome.component.html',
   styleUrls: ['./welcome.component.css'],
+  providers: [ProjectService]
 
 
 })
-export class WelcomeComponent {
-  projects: Project[]=[
-    new Project("I Need A Teleporter", "I want to be able to roll out of bed, use the teleporter and be where I need to be. No more commuting bullshit!", 1000000, "Marty", 1),
-    new Project("I Want A Hoverboard", "I really want to have some fun...yeah...", 500, "Claire", 2)
-  ]
-  constructor(private router: Router) {}
+export class WelcomeComponent implements OnInit {
+  projects: Project[]=[]
+  filterByCategory: string = "all";
+  constructor(private router: Router, private projectService: ProjectService) {}
 
   ngOnInit() {
+    this.projects = this.projectService.getProjects();
+
+  }
+
+  onChange(optionFromMenu){
+    this.filterByCategory = optionFromMenu;
   }
 
   goToProjectDetailPage(clickedProject: Project) {

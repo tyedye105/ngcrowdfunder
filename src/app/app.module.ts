@@ -6,12 +6,14 @@ import { routing } from './app.routing';
 import { AppComponent } from './app.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { ProjectDetailComponent } from './project-detail/project-detail.component';
+import { CategoryFilterPipe } from './category-filter.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     WelcomeComponent,
-    ProjectDetailComponent
+    ProjectDetailComponent,
+    CategoryFilterPipe
   ],
   imports: [
     BrowserModule,

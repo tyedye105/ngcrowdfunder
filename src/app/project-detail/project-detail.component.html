@@ -1,6 +1,5 @@
-<div class="well" *ngFor="let project of projects">
-    <h2><em>{{project.title}}</em> by {{project.creator}}</h2><br>
-    <h3>{{project.description}}</h3><br>
-    <h4>Amount Raised: {{project.raised}} Goal: {{project.goal}}</h4>
-    <h1>id check :{{project.id}}</h1>
+<div class="well">
+  <h2><em>{{projectToDisplay.title}}</em> by {{projectToDisplay.creator}}</h2><br>
+  <h3>{{projectToDisplay.description}}</h3><br>
+  <h4>Amount Raised: {{projectToDisplay.raised}} Goal: {{projectToDisplay.goal}}</h4>
 </div>
