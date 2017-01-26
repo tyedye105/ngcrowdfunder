@@ -25,11 +25,12 @@ a button {
   color: black;
 }
 .title-creator, .category {
-  color: #616161;
+  color: #424242;
 }
 .banner {
   margin-bottom: 30px;
   text-align: center;
+  color: #424242;
 }
 .filter {
   margin-bottom: 20px;
