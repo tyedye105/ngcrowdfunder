@@ -30,4 +30,9 @@ export class ProjectService {
                                 description: localUpdatedProject.description, goal: localUpdatedProject.goal, category: localUpdatedProject.category});
   }
 
+  deleteProject(localProjectToDelete){
+    var projectEntryInFirebase = this.getProjectById(localProjectToDelete.$key)
+    projectEntryInFirebase.remove();
+  }
+
 }
