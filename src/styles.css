@@ -1,4 +1,49 @@
 /* You can add global styles to this file, and also import other style files */
+
+* {
+  font-family: "Avenir";
+}
+
+body {
+  background-color: #fafafa
+}
+footer.footer {
+  background-color: black;
+  display: flex;
+  align-items: center;
+}
+a.text-muted {
+  color: white;
+}
+.amount-goal {
+  color: #4CAF50;
+}
+.description {
+  color: #757575;
+}
+a button {
+  color: black;
+}
+.title-creator, .category {
+  color: #616161;
+}
+.banner {
+  margin-bottom: 30px;
+  text-align: center;
+}
+.filter {
+  margin-bottom: 20px;
+}
+.navbar-default {
+  background-color: #4CAF50;
+}
+.navbar-default .navbar-brand {
+  color: white;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: white;
+}
 .footer {
   position: fixed;
   bottom: 0;

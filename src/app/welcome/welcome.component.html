@@ -1,14 +1,13 @@
 <h4>Filter by category:</h4>
-<select  (change)="onChange($event.target.value)">
+<select class="filter" (change)="onChange($event.target.value)">
   <option value="technology">Technology</option>
   <option value="charity">Charity</option>
   <option value="all">Show All</option>
-
 </select>
 <div class="well" *ngFor="let project of projects | categoryFilter:filterByCategory"  (click)="goToProjectDetailPage(project)">
-    <h3><em>{{project.title}}</em> by {{project.creator}}</h3>
-    <h6>{{project.category}}</h6>
+    <h3 class="title-creator">{{project.title}} by {{project.creator}}</h3>
+    <h6 class="category">{{project.category}}</h6>
     <br>
-    <h5>{{project.description}}</h5><br>
-    <h4>Amount Raised: {{project.raised}} Goal: {{project.goal}}</h4>
+    <h5 class="description">{{project.description}}</h5><br>
+    <h4 class="amount-goal">Amount Raised: {{project.raised}} Goal: {{project.goal}}</h4>
 </div>
