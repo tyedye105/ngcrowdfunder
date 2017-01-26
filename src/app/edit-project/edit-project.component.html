@@ -1,25 +1,32 @@
 <h1>Edit Project</h1>
+<div class="container">
+    <div class="form-group">
+      <label for="title">Title:</label><br>
+      <input class="edit"[(ngModel)]="selectedProject.title">
+    </div>
 
-<div class="form-group">
-  <label for="title">Title:</label>
-  <input [(ngModel)]="selectedProject.title">
+    <div class="form-group">
+      <label for="creator">Creator:</label><br>
+      <input class="edit"[(ngModel)]="selectedProject.creator">
+    </div>
+
+    <div class="form-group">
+      <label for="description">Description:</label><br>
+      <textarea class="edit"[(ngModel)]="selectedProject.description"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="goal">Goal:</label><br>
+      <input class="edit"[(ngModel)]="selectedProject.goal">
+    </div>
+
+    <div class="form-group">
+      <label for="category">Category:</label><br>
+      <input class="edit"[(ngModel)]="selectedProject.category">
+    </div>
+
+    <button class="btn" (click)="beginUpdatingProject(selectedProject)">Edit Project</button>
+
+
+    <button class="btn" (click)="beginDeletingProject(selectedProject)">Delete Project</button>
 </div>
-<div class="form-group">
-  <label for="creator">Creator:</label>
-  <input [(ngModel)]="selectedProject.creator">
-</div>
-<div class="form-group">
-  <label for="description">Description:</label>
-  <input [(ngModel)]="selectedProject.description">
-</div>
-<div class="form-group">
-  <label for="goal">Goal:</label>
-  <input [(ngModel)]="selectedProject.goal">
-</div>
-<div class="form-group">
-  <label for="category">Category:</label>
-  <input [(ngModel)]="selectedProject.category">
-</div>
-<button (click)="beginUpdatingProject(selectedProject)">Edit Project</button>
-<hr>
-<button (click)="beginDeletingProject(selectedProject)">Delete Project</button>

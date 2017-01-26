@@ -41,9 +41,28 @@ a button {
 .navbar-default .navbar-brand {
   color: white;
 }
-
+.new-project {
+  font-size: 17px;
+}
 .navbar-default .navbar-nav > li > a {
   color: white;
+}
+.btn {
+  background-color: #4CAF50;
+  color: white;
+}
+.btn:hover {
+  background-color: black;
+  color: white;
+}
+input {
+  width: 20%;
+}
+.edit {
+  width: 15%;
+}
+.new-project-btn {
+  margin-bottom: 20px;
 }
 .footer {
   position: fixed;

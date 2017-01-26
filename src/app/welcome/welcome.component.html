@@ -6,7 +6,7 @@
 </select>
 <div class="well" *ngFor="let project of projects | async | categoryFilter:filterByCategory">
     <h3 (click)="goToProjectDetailPage(project)" class="title-creator">{{project.title}} by {{project.creator}}</h3>
-    <h6 class="category">{{project.category}}</h6>
+    <h6 class="Category">{{project.category}}</h6>
     <br>
     <h5 class="description">{{project.description}}</h5><br>
     <h4 class="amount-goal">Amount Raised: {{project.raised}} Goal: {{project.goal}}</h4>

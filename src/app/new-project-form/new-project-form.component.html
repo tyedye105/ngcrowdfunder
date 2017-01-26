@@ -1,23 +1,24 @@
 <h1>Create Project</h1>
-
+<form>
 <div class="form-group">
-  <label for="title">Title:</label>
+  <label for="title">Title:</label><br>
   <input #newTitle>
 </div>
 <div class="form-group">
-  <label for="creator">Creator:</label>
+  <label for="creator">Creator:</label><br>
   <input #newCreator>
 </div>
 <div class="form-group">
-  <label for="description">Description:</label>
-  <input #newDescription>
+  <label for="description">Description:</label><br>
+  <textarea #newDescription></textarea>
 </div>
 <div class="form-group">
-  <label for="goal">Goal:</label>
+  <label for="goal">Goal:</label><br>
   <input #newGoal>
 </div>
 <div class="form-group">
-  <label for="category">category:</label>
+  <label for="category">category:</label><br>
   <input #newCategory>
 </div>
-<button (click)="submitForm(newTitle.value, newCreator.value, newDescription.value, newGoal.value, newCategory.value); newTitle.value=''; newTitle.value=''; newCreator.value=''; newDescription.value=''; newGoal.value=''; newCategory.value=''">Create Project</button>
+<button class="btn new-project-btn" (click)="submitForm(newTitle.value, newCreator.value, newDescription.value, newGoal.value, newCategory.value); newTitle.value=''; newTitle.value=''; newCreator.value=''; newDescription.value=''; newGoal.value=''; newCategory.value=''">Create Project</button>
+</form>

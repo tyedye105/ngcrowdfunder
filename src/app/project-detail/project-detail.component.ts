@@ -16,6 +16,7 @@ export class ProjectDetailComponent implements OnInit {
   projectId: string;
   projectToDisplay;
   filterByCategory: null;
+  hiddenDonateForm: null;
 
   constructor(private route: ActivatedRoute, private location: Location, private projectService: ProjectService) { }
 
@@ -25,6 +26,8 @@ export class ProjectDetailComponent implements OnInit {
    });
    this.projectToDisplay = this.projectService.getProjectById(this.projectId);
   }
+
+
 
 
 }
