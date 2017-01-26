@@ -12,8 +12,6 @@ export class ProjectService {
   }
 
   addProject(newProject: Project) {
-    alert('Service in action!')
-      debugger;
     this.projects.push(newProject);
   }
 
@@ -23,6 +21,13 @@ export class ProjectService {
 
   getProjectById(projectId: string){
     return this.angularFire.database.object('projects/' + projectId);
+  }
+
+  updateProject(localUpdatedProject){
+    var projectEntryInFirebase = this.getProjectById(localUpdatedProject.$key);
+    projectEntryInFirebase.update({title: localUpdatedProject.title,
+                                creator: localUpdatedProject.creator,
+                                description: localUpdatedProject.description, goal: localUpdatedProject.goal, category: localUpdatedProject.category});
   }
 
 }
