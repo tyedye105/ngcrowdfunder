@@ -1,0 +1,18 @@
+{ "projects":[{
+  "title": "I Need A teleporter",
+  "description":  "I want to be able to roll out of bed, use the teleporter and be where I need to be. No more commuting bullshit!",
+  "goal": 1000000,
+  "creator": "Marty",
+  "id": 1,
+  "category": "technology",
+  "raised": 0
+},{
+  "title": "I Want A Hoverboard",
+  "description":  "I really want to have some fun...yeah...",
+  "goal": 500,
+  "creator": "Claire",
+  "id": 2,
+  "category": "charity",
+  "raised": 0
+  }]
+}

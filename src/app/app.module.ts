@@ -9,6 +9,17 @@ import { ProjectDetailComponent } from './project-detail/project-detail.componen
 import { CategoryFilterPipe } from './category-filter.pipe';
 import { DonationFormComponent } from './donation-form/donation-form.component';
 import { NewProjectFormComponent } from './new-project-form/new-project-form.component';
+import { masterFirebaseConfig } from './api-keys';
+import { AngularFireModule } from 'angularfire2';
+import { AdminComponent } from './admin/admin.component';
+
+export const firebaseConfig = {
+  apiKey: masterFirebaseConfig.apiKey,
+  authDomain: masterFirebaseConfig.authDomain,
+  databaseURL: masterFirebaseConfig.databaseURL,
+  storageBucket: masterFirebaseConfig.storageBucket
+};
+
 
 @NgModule({
   declarations: [
@@ -17,13 +28,15 @@ import { NewProjectFormComponent } from './new-project-form/new-project-form.com
     ProjectDetailComponent,
     CategoryFilterPipe,
     DonationFormComponent,
-    NewProjectFormComponent
+    NewProjectFormComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    routing
+    routing,
+    AngularFireModule.initializeApp(firebaseConfig)
   ],
   providers: [],
   bootstrap: [AppComponent]

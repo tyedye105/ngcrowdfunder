@@ -2,12 +2,13 @@
 <select class="filter" (change)="onChange($event.target.value)">
   <option value="technology">Technology</option>
   <option value="charity">Charity</option>
-  <option value="all">Show All</option>
+  <option value="all" selected="">Show All</option>
 </select>
-<div class="well" *ngFor="let project of projects | categoryFilter:filterByCategory"  (click)="goToProjectDetailPage(project)">
+<div class="well" *ngFor="let project of projects | async | categoryFilter:filterByCategory"  (click)="goToProjectDetailPage(project)">
     <h3 class="title-creator">{{project.title}} by {{project.creator}}</h3>
     <h6 class="category">{{project.category}}</h6>
     <br>
     <h5 class="description">{{project.description}}</h5><br>
     <h4 class="amount-goal">Amount Raised: {{project.raised}} Goal: {{project.goal}}</h4>
+    <h1>{{project.$key}}</h1>
 </div>

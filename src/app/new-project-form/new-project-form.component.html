@@ -2,22 +2,22 @@
 
 <div class="form-group">
   <label for="title">Title:</label>
-  <input #Title>
+  <input #newTitle>
 </div>
 <div class="form-group">
   <label for="creator">Creator:</label>
-  <input #Creator>
+  <input #newCreator>
 </div>
 <div class="form-group">
   <label for="description">Description:</label>
-  <input #Description>
+  <input #newDescription>
 </div>
 <div class="form-group">
   <label for="goal">Goal:</label>
-  <input #Goal>
+  <input #newGoal>
 </div>
 <div class="form-group">
-  <label for="type">Type:</label>
-  <input #Type>
+  <label for="category">category:</label>
+  <input #newCategory>
 </div>
-<button type="button" name="button">Create Project</button>
+<button (click)="submitForm(newTitle.value, newCreator.value, newDescription.value, newGoal.value, newCategory.value); newTitle.value=''; newTitle.value=''; newCreator.value=''; newDescription.value=''; newGoal.value=''; newCategory.value=''">Create Project</button>

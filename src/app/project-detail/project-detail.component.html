@@ -1,7 +1,7 @@
 <div class="well">
-  <h2 class="title-creator">{{projectToDisplay.title}} by {{projectToDisplay.creator}}</h2><br>
-  <h3 class="category">{{projectToDisplay.description}}</h3><br>
-  <h4 class="amount-goal">Amount Raised: {{projectToDisplay.raised}} Goal: {{projectToDisplay.goal}}</h4>
+  <h2 class="title-creator">{{(projectToDisplay | async)?.title}} by {{(projectToDisplay | async)?.creator}}</h2><br>
+  <h3 class="category">{{(projectToDisplay | async)?.description}}</h3><br>
+  <h4 class="amount-goal">Amount Raised: {{(projectToDisplay | async)?.raised}} Goal: {{(projectToDisplay | async)?.goal}}</h4>
 </div>
 
 <a routerLink="donation-form"><button type="button" name="button">Donate</button></a>

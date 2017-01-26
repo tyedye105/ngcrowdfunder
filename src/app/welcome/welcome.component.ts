@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Project } from '../project.model';
 import { Router } from '@angular/router';
 import { ProjectService } from '../project.service';
+import { AngularFire, FirebaseListObservable } from 'angularfire2';
 
 @Component({
   selector: 'welcome',
@@ -12,7 +13,7 @@ import { ProjectService } from '../project.service';
 
 })
 export class WelcomeComponent implements OnInit {
-  projects: Project[]=[]
+  projects: FirebaseListObservable<any[]>;
   filterByCategory: string = "all";
   constructor(private router: Router, private projectService: ProjectService) {}
 
@@ -25,7 +26,7 @@ export class WelcomeComponent implements OnInit {
     this.filterByCategory = optionFromMenu;
   }
 
-  goToProjectDetailPage(clickedProject: Project) {
-    this.router.navigate(['projects', clickedProject.id]);
+  goToProjectDetailPage(clickedProject) {
+    this.router.navigate(['projects', clickedProject.$key]);
   }
 }
